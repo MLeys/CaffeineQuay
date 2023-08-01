@@ -20,6 +20,18 @@ const theme = createTheme({
       dark: '#c51162',
       contrastText: '#ffffff',
     },
+    neonPurple: {
+      light: '#a033ff',
+      main: '#7000ff',
+      dark: '#4c00cc',
+      contrastText: '#ffffff',
+    },
+    neonPink: {
+      light: '#ff69b4',
+      main: '#ff1493',
+      dark: '#c60063',
+      contrastText: '#ffffff',
+    },
   },
 });
 export default theme;

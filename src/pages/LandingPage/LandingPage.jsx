@@ -4,24 +4,38 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
-const LandingPage = () => {
+function LandingPage() {
   return (
     <Container>
+{/* Main Title Block */}
       <Box
         sx={{
+          // pt: 6,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'top',
           height: '100vh',
         }}
       >
-        <Typography variant="h1" component="div" gutterBottom>
-          Caffeine Quay
-        </Typography>
-        <Typography variant="h6" component="div" gutterBottom>
-          Your family's favorite lakeside cafe
-        </Typography>
+{/* Title Block */}
+        <Box 
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            pt: 0,
+            alignItems: 'center',
+            justifyContent: 'top',
+            }}
+        >
+          <Typography variant="h1" component="div" >
+            Caffeine Quay
+          </Typography>
+          <Typography variant="h6" component="div" >
+            Your family's favorite lakeside cafe
+          </Typography>
+        </Box>
+{/* Title Buttons */}
         <Box
           sx={{
             display: 'flex',

@@ -11,6 +11,7 @@ const ingredientSchema = new Schema({
   packageSize: {type: Number, required: true, default: 1},
   packageCost: {type: Number, required: true, default: 0},
   costPerUnit: {type: Number, required: true, default: 0},
+  imgUrl: String,
 });
 
 export default mongoose.model('Ingredient', ingredientSchema);

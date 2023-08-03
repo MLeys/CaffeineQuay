@@ -8,7 +8,8 @@ const itemSchema = new Schema({
     qty: Number,
     cost: Number,
   }],
-  totalPrice: {type: Number, required: true}
+  totalPrice: {type: Number, required: true},
+  imgUrl: String,
 });
 
 export default mongoose.model('Item', itemSchema);

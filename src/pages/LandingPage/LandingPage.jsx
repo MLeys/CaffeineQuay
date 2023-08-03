@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
 function LandingPage() {
+  const navigate = useNavigate();
+
   return (
     <Container>
 {/* Main Title Block */}
@@ -43,7 +46,7 @@ function LandingPage() {
             marginTop: '2rem',
           }}
         >
-          <Button variant="contained" color="neonPink">
+          <Button variant="contained" color="neonPink" onClick={() => navigate('/menu')}>
             Order
           </Button>
           <Button variant="contained" color="secondary">

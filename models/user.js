@@ -1,13 +1,17 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
+const Schema = mongoose.Schema;
 
 const SALT_ROUNDS = 6;
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
   username: {type: String, required: true, lowercase: true, unique: true},
   name: String,
   email: String,
-  password: String
+  password: String,
+  address: String,
+  orderHistory: [{type: Schema.Types.ObjectId, ref: 'Order', autopopulate: true}],
+  commentHistory: [{type: Schema.Types.ObjectId, ref: 'Comment', autopopulate: true}],
 }, {
   timestamps: true
 });

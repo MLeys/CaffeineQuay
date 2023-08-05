@@ -3,6 +3,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 
+import AppBarMenu from '../../components/AppBarMenu/AppBarMenu';
+
+
 function SettingsFilledcon ({color= "currentColor", fill="currentColor", height=16, width=16}) {
   return (
     <svg 
@@ -21,22 +24,22 @@ function SettingsFilledcon ({color= "currentColor", fill="currentColor", height=
 
 
 export default function MenuPage() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
-    <Tabs
-      value={value}
-      onChange={handleChange}
-      aria-label="icon position tabs example"
-    >
-      <Tab icon={<SettingsFilledcon />} label="top" />
-      <Tab icon={<SettingsFilledcon />} iconPosition="start" label="start" />
-      <Tab icon={<SettingsFilledcon />} iconPosition="end" label="end" />
-      <Tab icon={<SettingsFilledcon />} iconPosition="bottom" label="bottom" />
+    <>
+    <AppBarMenu >
+
+    </AppBarMenu>
+    <Tabs>
+      <Tab icon={<SettingsFilledcon />} label="bottom" />
+      <Tab icon={<SettingsFilledcon />} label="bottom" />
+      <Tab icon={<SettingsFilledcon />} label="bottom" />
+      <Tab icon={<SettingsFilledcon />} iconPosition="top" label="top" />
+      <Tab icon={<SettingsFilledcon />} iconPosition="top" label="top" />
+      <Tab icon={<SettingsFilledcon />} iconPosition="top" label="top" />
     </Tabs>
+
+    </>
+
   );
 }

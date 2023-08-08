@@ -1,10 +1,13 @@
 import * as React from 'react';
+import theme from '../../theme';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+
 
 function MenuIcon({color= "currentColor", fill="currentColor", height=16, width=16}){
   return (
@@ -24,31 +27,31 @@ function MenuIcon({color= "currentColor", fill="currentColor", height=16, width=
 
 const menuItems = ['Quick Order', 'Menu'];
 
-export default function AppBarMenu() {
+export default function Header() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+    <Box sx={{ flexGrow: 1 }} >
+      <AppBar position="static" >
+        
+        <Toolbar sx={{ bgcolor: theme.palette.neonPink.main}} >
           <IconButton
+            
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, bgcolor: theme.palette.secondary.main }}
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+          <Box flexDirection={'row'} bgcolor={theme.palette.neonPink.light}>
+            {menuItems.map((item) => (
+              <Typography key={item} color='white' variant="h6" component="button" sx={{ flexGrow: 1 }}>
                 {item}
-              </Button>
+              </Typography>
             ))}
+            <Typography  variant='h3'>Caffeine Quay</Typography>
           </Box>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">BudsBEEE</Button>
+          
         </Toolbar>
       </AppBar>
     </Box>

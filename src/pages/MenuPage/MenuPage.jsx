@@ -3,9 +3,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
 
-import AppBarMenu from '../../components/AppBarMenu/AppBarMenu';
-
-
 function SettingsFilledcon ({color= "currentColor", fill="currentColor", height=16, width=16}) {
   return (
     <svg 
@@ -27,10 +24,10 @@ export default function MenuPage() {
 
   return (
     <>
-    <AppBarMenu >
-
-    </AppBarMenu>
-    <Tabs>
+      <p>Hello</p>
+    <Tabs
+      value={0}
+    >
       <Tab icon={<SettingsFilledcon />} label="bottom" />
       <Tab icon={<SettingsFilledcon />} label="bottom" />
       <Tab icon={<SettingsFilledcon />} label="bottom" />
